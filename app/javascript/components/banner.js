@@ -2,7 +2,7 @@ import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
   new Typed('#banner-typed-text', {
-    strings: ["Mojito", "Bloody Mary", "Cuba Libre"],
+    strings: ["Sailor Moon", "Sailor Mercury", "Sailor Venus"],
     typeSpeed: 50,
     loop: true
   });
