@@ -1,11 +1,10 @@
 <div class="container">
-  <div class="row">
     <% @cocktails.each do |cocktail| %>
-    <div class="col-6">
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?alcohol,cocktail)">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?movie,action)">
+       <%= link_to cocktail.name, cocktail_path(cocktail) %>
+       <%= link_to cocktail_path(cocktail), id: "delete-tag", method: :delete do %>
+          <i class="fas fa-times"></i>
+       <% end %>
     </div>
     <% end %>
-  </div>
 </div>

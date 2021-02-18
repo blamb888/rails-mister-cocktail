@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Pop Culture Cocktails</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -20,13 +20,12 @@
     <div class="page-frame-header">
       <%= render '../views/navbar' %>
     </div>
-    <div class="page-frame-body">
-
-    </div>
     <%= yield %>
     <div class="page-frame-footer">
       <%= render '../views/footer' %>
     </div>
   </div>
+  <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+
   </body>
 </html>

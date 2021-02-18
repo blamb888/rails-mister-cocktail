@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?movie,poster?blur=2)">
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <% if @cocktail.id %>
+        <%= f.submit 'Update', class: 'btn btn-info' %>
+        <%= link_to 'Home', cocktails_path, class: "btn btn-primary" %>
+      <% else %>
+        <%= f.submit 'Add', class: 'btn btn-info' %>
+        <%= link_to 'Home', cocktails_path, class: "btn btn-primary" %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

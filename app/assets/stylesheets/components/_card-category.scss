@@ -12,6 +12,32 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  a {
+    color: whitesmoke;
+  }
+}
+
+#delete-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 80%;
+  span {
+    background: $warning;
+    font-size: .7em;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  a {
+    color: white;
+  }
+}
+.card-category:hover {
+  /*customizable*/
+  transition: 0.2s ease-out;
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 16px  rgba(10,10,10,0.3);
 }
 /*
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">

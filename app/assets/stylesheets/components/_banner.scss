@@ -17,5 +17,14 @@
   font-size: 20px;
   color: white;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  margin: 8px;
+}
+.banner h2 {
+  color: rgb(219, 187, 187);
+}
+.banner .container {
+  .form-group {
+    margin-top: 20px;
+  }
 }

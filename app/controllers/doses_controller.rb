@@ -3,6 +3,7 @@ before_action :find_cocktail, except: [:destroy]
 
   def new
     @dose = Dose.new
+    @ingredients = Ingredient.order(name: :asc)
   end
 
   def create
