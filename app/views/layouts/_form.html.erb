@@ -1,0 +1,10 @@
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <% if @cocktail.id %>
+    <%= f.submit 'Update', class: 'btn btn-info' %>
+    <%= link_to 'Home', cocktails_path, class: "btn btn-primary" %>
+  <% else %>
+    <%= f.submit 'Add', class: 'btn btn-info' %>
+    <%= link_to 'Home', cocktails_path, class: "btn btn-primary" %>
+  <% end %>
+<% end %>

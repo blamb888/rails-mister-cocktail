@@ -7,9 +7,18 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import 'bootstrap';
+import 'bootstrap'
+// import Swal from 'sweetalert2'
 
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import { loadDynamicBannerText } from '../components/banner';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your JS functions here
+  // [...]
+  loadDynamicBannerText();
+});

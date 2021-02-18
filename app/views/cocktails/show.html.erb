@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center">
+  <div class="card col-6" style="width: 22rem; margin: 50px;">
+    <img class="card-img-top py-3" src="https://source.unsplash.com/1600x900/?cocktail,alcohol" alt="Card image cap">
+    <div class="card-body">
+      <h4 class="card-title"><%= @cocktail.name %></h4>
+      <% @cocktail.doses.each do |dose| %>
+      <h4 class="card-title"><%= dose.ingredient.name %></h4>
+      <h4 class="card-title"><%= dose.description %></h4>
+        <%= link_to "Delete Recipe", dose_path(dose), class: "btn btn-flat", method: :delete, data: { confirm: "Are you sure you want to delete this recipe, buddy?" } %>
+      <% end  %>
+        <%= link_to "Add Recipe", new_cocktail_dose_path(@cocktail), class: 'btn btn-gradient' %>
+      </h4>
+    </div>
+  </div>
+</div>
