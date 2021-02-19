@@ -2,6 +2,7 @@
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/1600x900/?film,horror?blur=2)">
     <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name %>
+      <%= f.input :photo, as: :file, class: "btn btn-primary" %>
       <% if @cocktail.id %>
         <%= f.submit 'Update', class: 'btn btn-info' %>
         <%= link_to 'Home', cocktails_path, class: "btn btn-primary" %>
