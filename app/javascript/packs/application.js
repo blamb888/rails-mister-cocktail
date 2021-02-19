@@ -16,10 +16,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import { loadDynamicBannerText } from '../components/banner';
-import { Swal } from '../components/init_sweetalert';
+import { init_sweetalert } from '../components/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   // [...]
   loadDynamicBannerText();
+  init_sweetalert();
 });

@@ -6,7 +6,9 @@
       <% @cocktail.doses.each do |dose| %>
       <h4 class="card-title"><%= dose.ingredient.name %></h4>
       <h4 class="card-title"><%= dose.description %></h4>
-        <%= link_to "Remove Ingredient", dose_path(dose), id: "remove-ingredient", class: "btn btn-flat", method: :delete %>
+        <%= link_to "Remove Ingredient", dose_path(dose), id: "delete-tag", class: "btn btn-flat", method: :delete %>
+        <!--<button class="delete-tag" class="btn btn-danger">Remove Ingredient</button>
+        <%= link_to "", dose_path(dose), method: :delete, id: "delete-tag", class: "hidden" %>-->
       <% end  %>
       </h4>
       <div class="pt-5">
