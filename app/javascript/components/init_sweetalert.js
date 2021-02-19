@@ -7,20 +7,23 @@ import Swal from 'sweetalert2';
 // });
 const init_sweetalert = () => {
   const swalButtons = document.querySelectorAll(".delete-tag");
+  console.log("hello")
   swalButtons.forEach((button) => {
+    console.log(button)
       button.addEventListener('click', (event) => {
         event.preventDefault();
         Swal.fire({
           title: 'Are you sure?',
-          text: "Somebody might really love this!",
+          text: "You won't be able to revert this!",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: `I don't care, delete it!`
+          confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            const link = event.target.nextElementSibling;
+            console.log(button)
+            const link = button.nextElementSibling;
             link.click();
             event.target.parentElement.remove();
             Swal.fire(
@@ -31,7 +34,7 @@ const init_sweetalert = () => {
           }
         })
       });
-  })
+  });
 };
 
 export { init_sweetalert };

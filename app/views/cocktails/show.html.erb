@@ -8,7 +8,8 @@
       <h4 class="card-title"><%= dose.description %></h4>
       </h4>
       <div class="pt-5">
-        <%= link_to "Remove Ingredient", dose_path(dose), class: "delete-tag btn btn-flat mb-2", method: :delete %>
+        <button class="delete-tag" class="btn btn-warning"><i class="fas fa-times"></i></button>
+        <%= link_to "THIS IS A BUTTON", dose_path(dose), class: "hidden", method: :delete %>
       <% end  %>
       <%= link_to "Add Ingredient", new_cocktail_dose_path(@cocktail), class: 'btn btn-gradient' %>
       <%= link_to 'Home', cocktails_path, class: "btn btn-doge" %>

@@ -3,12 +3,13 @@
     <% if cocktail.photo.attached? %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key %>)">
       <button class="delete-tag" class="btn btn-warning"><i class="fas fa-times"></i></button>
+      <%= link_to "", cocktail_path(cocktail), method: :delete, class: "hidden" %>
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
     <% else %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/id/237/200/300)">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
       <button class="delete-tag" class="btn btn-primary">Delete</button>
-      <%= link_to "", cocktails_path, method: :delete, id: "delete-link", class: "hidden" %>
+      <%= link_to "", cocktail_path(cocktail), method: :delete, class: "hidden" %>
     <% end %>
   </div>
   <% end %>
