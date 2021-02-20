@@ -55,19 +55,40 @@
 .card-category {
   position: relative;
   button {
+    font-size: small;
     position: absolute;
     top: 8px;
     left: 8px;
-    color: white;
-    padding: 4px 16px;
-    border-radius: 4px;
-    background: #d32441;
-    transition: background 0.3s ease;
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: -6px;
+    border-radius: 12px;
+    font-weight: lighter;
+    opacity: .2;
+    transition: opacity 0.3s ease;
   }
-
   button:hover {
-    background: #1BCB7F;
-    color: white;
+    opacity: 1;
+  }
+}
+
+.dose-container {
+  position: relative;
+  button {
+    font-size: small;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: -6px;
+    border-radius: 12px;
+    font-weight: lighter;
+    opacity: .2;
+    transition: opacity 0.3s ease;
+  }
+  button:hover {
+    opacity: 1;
   }
 }
 
